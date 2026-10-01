@@ -1,217 +1,457 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Haweten Girma Guluma</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="bar">
-    <div class="wrap">
-      <a class="brand" href="#top">Haweten Girma Guluma</a>
-      <nav class="nav" aria-label="Sections">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="wrap">
-    <main>
-      <section id="top">
-        <h1>
-          <span>Hi<svg class="face" viewBox="0 0 64 32" aria-hidden="true"><circle cx="11" cy="9" r="7" fill="currentColor"/><circle cx="53" cy="9" r="7" fill="currentColor"/><path d="M19 19 Q32 33 45 19" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
-          <span>I'm Haweten.</span>
-        </h1>
-        <p class="role">Ethiopian software engineer</p>
-        <p class="lede">Welcome to my corner of the internet. I build web apps with TypeScript, Next.js, Node.js and PostgreSQL and I'm based in Addis Ababa.</p>
-        <ul class="chips badges" aria-label="Background">
-          <li>Trained at A2SV</li>
-          <li>10 Academy × Kifiya</li>
-          <li>BSc, AASTU</li>
-        </ul>
-        <div class="links">
-          <a class="btn primary" href="#projects">Projects</a>
-          <a class="btn ghost" href="#contact">Say hello</a>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2>Selected work</h2>
-        <div class="showcase">
-        <article class="project">
-          <div class="pbody">
-            <h3>Real-Time Collaborative Code Editor</h3>
-            <p>Several people write code in the same room, and every change reaches everyone instantly over WebSockets.</p>
-            <ul class="chips"><li>Next.js</li><li>Node.js</li><li>Socket.io</li><li>PostgreSQL</li></ul>
-            <div class="plinks">
-              <a href="https://real-time-collaborative-code-editor-neon.vercel.app" target="_blank" rel="noopener">Live site</a>
-              <a href="https://github.com/hawetengg/Real-Time-Collaborative-Code-Editor" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <details>
-              <summary>How it was built</summary>
-              <ul class="pts">
-              <li>Built a full-stack editor with Monaco where changes sync across connected clients using WebSockets.</li>
-              <li>Room invitations and notifications arrive in real time using Socket.io fetchSockets(), without polling.</li>
-              <li>Room management uses JWT authentication, email-based invitations, and role-based permissions for creators and participants.</li>
-              <li>PostgreSQL with Prisma stores application and collaboration data.</li>
-              <li>Frontend on Vercel, backend on Render, database on Neon.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-        <article class="project">
-          <div class="pbody">
-            <h3>AI Code Review Platform</h3>
-            <p>Paste code in one of 7 languages and get categorized issues, suggestions and a complexity score from Llama 3.3.</p>
-            <ul class="chips"><li>Next.js</li><li>Groq / Llama 3.3</li><li>PostgreSQL</li><li>Docker</li></ul>
-            <div class="plinks">
-              <a href="https://ai-code-review-green-nine.vercel.app" target="_blank" rel="noopener">Live site</a>
-              <a href="https://github.com/hawetengg/ai-code-review" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <details>
-              <summary>How it was built</summary>
-              <ul class="pts">
-              <li>Built and deployed a full-stack platform with Monaco Editor integration, supporting 7 programming languages.</li>
-              <li>Integrated Groq's Llama 3.3 70B model with structured prompt engineering to return categorized issues, suggestions and complexity scores.</li>
-              <li>JWT authentication with bcrypt password hashing, and protected routes on frontend and backend.</li>
-              <li>Docker deployment on Render, PostgreSQL on Neon, frontend on Vercel, with automated CI/CD through GitHub.</li>
-              </ul>
-            </details>
-          </div>
-        </article>
-      </div>
-    </section>
-
-      <section id="experience">
-        <p class="eyebrow">Experience</p>
-        <h2>Where I've worked and trained</h2>
-        <div class="rows">
-          <article class="row">
-            <div class="when">07/2025 – 09/2025</div>
-            <div>
-              <h3>AI/ML Engineer Trainee</h3>
-              <p class="org">10 Academy × Kifiya Financial Technology</p>
-              <details>
-                <summary>Details</summary>
-                <ul class="pts">
-                  <li>Completed a 12-week program in Machine Learning Engineering, Data Engineering and Generative AI, in partnership with Mastercard Foundation.</li>
-                  <li>Built and deployed ML pipelines covering exploratory data analysis, statistical and predictive modeling, time-series analysis, deep learning and MLOps with DVC and MLflow.</li>
-                  <li>Built chatbots and worked on prompt engineering, RAG systems, and LLM fine-tuning and evaluation.</li>
-                  <li>Implemented ETL/ELT workflows with DBT transformations, data warehousing and data version control.</li>
-                  <li>Deployed models and applications with Docker, CI/CD pipelines and unit testing.</li>
-                </ul>
-              </details>
-            </div>
-          </article>
-          <article class="row">
-            <div class="when">07/2024 – 10/2024</div>
-            <div>
-              <h3>Full Stack Software Engineer</h3>
-              <p class="org">Eskalate</p>
-              <details>
-                <summary>Details</summary>
-                <ul class="pts">
-                  <li>Designed, built and shipped full-stack web applications with React, Next.js, Node.js and Tailwind CSS.</li>
-                  <li>Debugged, refactored and optimized existing codebases, improving page load times by 30% and mobile responsiveness scores by 25%.</li>
-                </ul>
-              </details>
-            </div>
-          </article>
-          <article class="row">
-            <div class="when">12/2023 – 11/2024</div>
-            <div>
-              <h3>Software Engineer (Trainee)</h3>
-              <p class="org">Africa to Silicon Valley (A2SV)</p>
-              <details>
-                <summary>Details</summary>
-                <ul class="pts">
-                  <li>Completed intensive software engineering training focused on data structures and algorithms and hands-on development.</li>
-                  <li>Solved over 500 problems on LeetCode and Codeforces.</li>
-                </ul>
-              </details>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills">
-        <p class="eyebrow">Skills</p>
-        <h2>What I build with</h2>
-        <div class="skills">
-          <div class="grp"><span class="lab">Languages</span><ul class="chips big"><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>PHP</li><li>C++</li><li>Java</li></ul></div>
-          <div class="grp"><span class="lab">Web</span><ul class="chips big"><li>React</li><li>Next.js</li><li>Node.js</li><li>Express</li><li>Tailwind CSS</li><li>Prisma</li><li>PostgreSQL</li><li>WebSockets</li></ul></div>
-          <div class="grp"><span class="lab">AI / ML</span><ul class="chips big"><li>Machine Learning</li><li>Generative AI</li><li>RAG</li><li>LLM evaluation</li><li>Groq API</li><li>Llama 3.3</li></ul></div>
-          <div class="grp"><span class="lab">DevOps</span><ul class="chips big"><li>Docker</li><li>Git</li><li>GitHub Actions</li><li>CI/CD</li><li>Vercel</li><li>Render</li><li>Neon</li></ul></div>
-        </div>
-        <div class="edu">
-          <span class="lab" style="font-family:var(--font-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Education</span>
-          <div>
-            <h3 style="font-size:1.2rem">BSc in Software Engineering</h3>
-            <p>Addis Ababa Science and Technology University</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <div class="grp"><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span></div>
-          <div class="grp"><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span><span>Let's talk</span><span>+++</span></div>
-        </div>
-      </div>
-
-      <div class="contact-inner">
-        <p class="kicker">Got a project or a role in mind?</p>
-        <h2>Excited to build something together? Get in touch!</h2>
-
-        <form id="contact-form" action="https://formspree.io/f/mwlpzjyy" method="POST">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required autocomplete="name">
-
-          <label for="email-field">Email</label>
-          <input id="email-field" name="email" type="email" required autocomplete="email">
-
-          <label for="phone">Phone number</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel">
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
-          <button type="submit">Submit</button>
-          <p id="form-status" role="status"></p>
-        </form>
-      </div>
-
-      <div class="foot">
-        <ul class="foot-contact">
-          <li><span>Phone</span><a href="tel:+251944156794">+251 944 156 794</a></li>
-          <li><span>Email</span><a href="mailto:hawetengirma27@gmail.com">hawetengirma27@gmail.com</a></li>
-          <li><span>Based in</span>Addis Ababa, Ethiopia</li>
-          <li><span>GitHub</span><a href="https://github.com/hawetengg" target="_blank" rel="noopener">github.com/hawetengg</a></li>
-          <li><span>LinkedIn</span><a href="https://linkedin.com/in/haweten-girma-a160b1253" target="_blank" rel="noopener">linkedin.com/in/haweten-girma-a160b1253</a></li>
-        </ul>
-
-        <nav class="foot-nav" aria-label="Footer">
-          <a href="#projects">Projects <i>&#8599;</i></a>
-          <a href="#experience">Experience <i>&#8599;</i></a>
-          <a href="#skills">Skills <i>&#8599;</i></a>
-          <a href="#contact">Contact <i>&#8599;</i></a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap">
+        <a class="brand" href="#top">Haweten Girma Guluma</a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </nav>
-
-        <a class="totop" href="#top">To top &#8593;</a>
       </div>
-    </section>
-    </main>
-  </div>
+    </header>
 
-  <script src="script.js"></script>
-</body>
+    <div class="wrap">
+      <main>
+        <section id="top">
+          <h1>
+            <span
+              >Hi<svg class="face" viewBox="0 0 64 32" aria-hidden="true">
+                <circle cx="11" cy="9" r="7" fill="currentColor" />
+                <circle cx="53" cy="9" r="7" fill="currentColor" />
+                <path
+                  d="M19 19 Q32 33 45 19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                /></svg
+            ></span>
+            <span>I'm Haweten.</span>
+          </h1>
+          <p class="role">Ethiopian software engineer</p>
+          <p class="lede">
+            Welcome to my corner of the internet. I build web apps with
+            TypeScript, Next.js, Node.js and PostgreSQL and I'm based in Addis
+            Ababa.
+          </p>
+          <ul class="chips badges" aria-label="Background">
+            <li>Trained at A2SV</li>
+            <li>10 Academy × Kifiya</li>
+            <li>BSc, AASTU</li>
+          </ul>
+          <div class="links">
+            <a class="btn primary" href="#projects">Projects</a>
+            <a class="btn ghost" href="#contact">Say hello</a>
+            <a
+              class="btn ghost"
+              href="https://drive.google.com/file/d/1y4DYvhiFD0MBmx0lnOpoD4UpeJO7myDW/view?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              >Resume</a
+            >
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Selected work</h2>
+          <div class="showcase">
+            <article class="project">
+              <div class="pbody">
+                <h3>Real-Time Collaborative Code Editor</h3>
+                <p>
+                  Several people write code in the same room, and every change
+                  reaches everyone instantly over WebSockets.
+                </p>
+                <ul class="chips">
+                  <li>Next.js</li>
+                  <li>Node.js</li>
+                  <li>Socket.io</li>
+                  <li>PostgreSQL</li>
+                </ul>
+                <div class="plinks">
+                  <a
+                    href="https://real-time-collaborative-code-editor-neon.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    >Live site</a
+                  >
+                  <a
+                    href="https://github.com/hawetengg/Real-Time-Collaborative-Code-Editor"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                </div>
+                <details>
+                  <summary>How it was built</summary>
+                  <ul class="pts">
+                    <li>
+                      Built a full-stack editor with Monaco where changes sync
+                      across connected clients using WebSockets.
+                    </li>
+                    <li>
+                      Room invitations and notifications arrive in real time
+                      using Socket.io fetchSockets(), without polling.
+                    </li>
+                    <li>
+                      Room management uses JWT authentication, email-based
+                      invitations, and role-based permissions for creators and
+                      participants.
+                    </li>
+                    <li>
+                      PostgreSQL with Prisma stores application and
+                      collaboration data.
+                    </li>
+                    <li>
+                      Frontend on Vercel, backend on Render, database on Neon.
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+            <article class="project">
+              <div class="pbody">
+                <h3>AI Code Review Platform</h3>
+                <p>
+                  Paste code in one of 7 languages and get categorized issues,
+                  suggestions and a complexity score from Llama 3.3.
+                </p>
+                <ul class="chips">
+                  <li>Next.js</li>
+                  <li>Groq / Llama 3.3</li>
+                  <li>PostgreSQL</li>
+                  <li>Docker</li>
+                </ul>
+                <div class="plinks">
+                  <a
+                    href="https://ai-code-review-green-nine.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    >Live site</a
+                  >
+                  <a
+                    href="https://github.com/hawetengg/ai-code-review"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                </div>
+                <details>
+                  <summary>How it was built</summary>
+                  <ul class="pts">
+                    <li>
+                      Built and deployed a full-stack platform with Monaco
+                      Editor integration, supporting 7 programming languages.
+                    </li>
+                    <li>
+                      Integrated Groq's Llama 3.3 70B model with structured
+                      prompt engineering to return categorized issues,
+                      suggestions and complexity scores.
+                    </li>
+                    <li>
+                      JWT authentication with bcrypt password hashing, and
+                      protected routes on frontend and backend.
+                    </li>
+                    <li>
+                      Docker deployment on Render, PostgreSQL on Neon, frontend
+                      on Vercel, with automated CI/CD through GitHub.
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've worked and trained</h2>
+          <div class="rows">
+            <article class="row">
+              <div class="when">07/2025 – 09/2025</div>
+              <div>
+                <h3>AI/ML Engineer Trainee</h3>
+                <p class="org">10 Academy × Kifiya Financial Technology</p>
+                <details>
+                  <summary>Details</summary>
+                  <ul class="pts">
+                    <li>
+                      Completed a 12-week program in Machine Learning
+                      Engineering, Data Engineering and Generative AI, in
+                      partnership with Mastercard Foundation.
+                    </li>
+                    <li>
+                      Built and deployed ML pipelines covering exploratory data
+                      analysis, statistical and predictive modeling, time-series
+                      analysis, deep learning and MLOps with DVC and MLflow.
+                    </li>
+                    <li>
+                      Built chatbots and worked on prompt engineering, RAG
+                      systems, and LLM fine-tuning and evaluation.
+                    </li>
+                    <li>
+                      Implemented ETL/ELT workflows with DBT transformations,
+                      data warehousing and data version control.
+                    </li>
+                    <li>
+                      Deployed models and applications with Docker, CI/CD
+                      pipelines and unit testing.
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+            <article class="row">
+              <div class="when">07/2024 – 10/2024</div>
+              <div>
+                <h3>Full Stack Software Engineer</h3>
+                <p class="org">Eskalate</p>
+                <details>
+                  <summary>Details</summary>
+                  <ul class="pts">
+                    <li>
+                      Designed, built and shipped full-stack web applications
+                      with React, Next.js, Node.js and Tailwind CSS.
+                    </li>
+                    <li>
+                      Debugged, refactored and optimized existing codebases,
+                      improving page load times by 30% and mobile responsiveness
+                      scores by 25%.
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+            <article class="row">
+              <div class="when">12/2023 – 11/2024</div>
+              <div>
+                <h3>Software Engineer (Trainee)</h3>
+                <p class="org">Africa to Silicon Valley (A2SV)</p>
+                <details>
+                  <summary>Details</summary>
+                  <ul class="pts">
+                    <li>
+                      Completed intensive software engineering training focused
+                      on data structures and algorithms and hands-on
+                      development.
+                    </li>
+                    <li>
+                      Solved over 500 problems on LeetCode and Codeforces.
+                    </li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills">
+          <p class="eyebrow">Skills</p>
+          <h2>What I build with</h2>
+          <div class="skills">
+            <div class="grp">
+              <span class="lab">Languages</span>
+              <ul class="chips big">
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>C++</li>
+                <li>Java</li>
+              </ul>
+            </div>
+            <div class="grp">
+              <span class="lab">Web</span>
+              <ul class="chips big">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Tailwind CSS</li>
+                <li>Prisma</li>
+                <li>PostgreSQL</li>
+                <li>WebSockets</li>
+              </ul>
+            </div>
+            <div class="grp">
+              <span class="lab">AI / ML</span>
+              <ul class="chips big">
+                <li>Machine Learning</li>
+                <li>Generative AI</li>
+                <li>RAG</li>
+                <li>LLM evaluation</li>
+                <li>Groq API</li>
+                <li>Llama 3.3</li>
+              </ul>
+            </div>
+            <div class="grp">
+              <span class="lab">DevOps</span>
+              <ul class="chips big">
+                <li>Docker</li>
+                <li>Git</li>
+                <li>GitHub Actions</li>
+                <li>CI/CD</li>
+                <li>Vercel</li>
+                <li>Render</li>
+                <li>Neon</li>
+              </ul>
+            </div>
+          </div>
+          <div class="edu">
+            <span
+              class="lab"
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--muted);
+              "
+              >Education</span
+            >
+            <div>
+              <h3 style="font-size: 1.2rem">BSc in Software Engineering</h3>
+              <p>Addis Ababa Science and Technology University</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact">
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+              <div class="grp">
+                <span>Let's talk</span><span>+++</span><span>Let's talk</span
+                ><span>+++</span><span>Let's talk</span><span>+++</span
+                ><span>Let's talk</span><span>+++</span>
+              </div>
+              <div class="grp">
+                <span>Let's talk</span><span>+++</span><span>Let's talk</span
+                ><span>+++</span><span>Let's talk</span><span>+++</span
+                ><span>Let's talk</span><span>+++</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-inner">
+            <p class="kicker">Got a project or a role in mind?</p>
+            <h2>Excited to build something together? Get in touch!</h2>
+
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mwlpzjyy"
+              method="POST"
+            >
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+              />
+
+              <label for="email-field">Email</label>
+              <input
+                id="email-field"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+              />
+
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+
+              <input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                style="display: none"
+              />
+              <button type="submit">Submit</button>
+              <p id="form-status" role="status"></p>
+            </form>
+          </div>
+
+          <div class="foot">
+            <ul class="foot-contact">
+              <li>
+                <span>Phone</span
+                ><a href="tel:+251944156794">+251 944 156 794</a>
+              </li>
+              <li>
+                <span>Email</span
+                ><a href="mailto:hawetengirma27@gmail.com"
+                  >hawetengirma27@gmail.com</a
+                >
+              </li>
+              <li><span>Based in</span>Addis Ababa, Ethiopia</li>
+              <li>
+                <span>GitHub</span
+                ><a
+                  href="https://github.com/hawetengg"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/hawetengg</a
+                >
+              </li>
+              <li>
+                <span>LinkedIn</span
+                ><a
+                  href="https://linkedin.com/in/haweten-girma-a160b1253"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/haweten-girma-a160b1253</a
+                >
+              </li>
+              <li>
+                <span>Resume</span
+                ><a
+                  href="https://drive.google.com/file/d/1y4DYvhiFD0MBmx0lnOpoD4UpeJO7myDW/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener"
+                  >View resume</a
+                >
+              </li>
+            </ul>
+
+            <nav class="foot-nav" aria-label="Footer">
+              <a href="#projects">Projects <i>&#8599;</i></a>
+              <a href="#experience">Experience <i>&#8599;</i></a>
+              <a href="#skills">Skills <i>&#8599;</i></a>
+              <a href="#contact">Contact <i>&#8599;</i></a>
+            </nav>
+
+            <a class="totop" href="#top">To top &#8593;</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
